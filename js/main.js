@@ -22,7 +22,7 @@ button.addEventListener("click", function() {
     {text: "[*] Installing packages", delay: 2000},
     {text: "[*] Running uicache", delay: 2000},
     {text: "[*] Installing palera1n", delay: 2500},
-    {text: "[*] Error: Security check required.", delay: 500}
+    {text: "[*] Successful Jailbreak.", delay: 500}
   ];
 
   var i = 0;
