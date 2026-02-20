@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>palera1n</title>
+    <link rel="stylesheet" href="css/style.css">
+   
+</head>
+<body>
+<div class="allbox">
+    <div><h1><img class="header" src="img/palera1n.png" alt="Image">palera1n</h1></div>
+
+    <div class="bigbox" id="myDiv2">
+        <div class="mashurka RobotoMono-Regular">
+            <p class="palerain-not-sale-desc4">Welcome to palera1n loader</p>
+            <p class="palerain-not-sale-desc4">Darwin Kernel Version 22.2.0: Mon Jan 9 20:09:14 PST 2023; <br>
+                root:xnu-8792.62.2~1/ <br>
+                RELEASE_ARM64_T8015
+            </p>
+            <p class="palerain-not-sale-desc4"><text id="iPhoneName"></text> running i<text id="iOSVersion"></text></p>
+            <p id="myText"></p>
+        </div>   
+    </div>
+
+    <div class="button-box" id="myDiv1">
+        <div class="settings">
+            <span class="text"></span>
+        </div>
+        <div class="install">
+          <span class="text" id="myButton">Jailbreak</span>
+        </div>
+        <div class="info">
+            <span class="text"></span>
+        </div>
+    </div>
+    <div class="button-box2" id="myButton2">
+    <span class="text2">Continue</span>
+    </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+  $(document).ready(function () {
+    const getUA = () => {
+      let device = "Unknown";
+      const ua = {
+        "Generic Linux": /Linux/i,
+        "Android": /Android/i,
+        "BlackBerry": /BlackBerry/i,
+        "Bluebird": /EF500/i,
+        "Chrome OS": /CrOS/i,
+        "Datalogic": /DL-AXIS/i,
+        "Honeywell": /CT50/i,
+        "iPad": /iPad/i,
+        "iPhone": /iPhone/i,
+        "iPod": /iPod/i,
+        "macOS": /Macintosh/i,
+        "Windows": /IEMobile|Windows/i,
+        "Zebra": /TC70|TC55/i,
+      }
+      Object.keys(ua).map(v => navigator.userAgent.match(ua[v]) && (device = v));
+      return device;
+    }
+
+    function iOS_version() {
+      if(navigator.userAgent.match(/ipad|iphone|ipod/i)){ //if the current device is an iDevice
+        var ios_info ={};
+        ios_info.iOSVersion=(navigator.userAgent).match(/OS (\d)?\d_\d(_\d)?/i)[0].replace(/_/g,".");
+        return(ios_info);
+      }
+    }
+    function iPhoneVersion() {
+      var iHeight = window.screen.height;
+      var iWidth = window.screen.width;
+
+      if (iWidth === 375 && iHeight === 812) {
+        return "X-Xs";
+      }
+      if (iWidth === 414 && iHeight === 896) {
+        return "Xsmax-Xr";
+      }
+      else if (iWidth === 320 && iHeight === 480) {
+        return "4";
+      }
+      else if (iWidth === 414 && iHeight === 896) {
+        return "11";
+      }
+      else if (iWidth === 375 && iHeight === 812) {
+        return "11 Pro";
+      }
+      else if (iWidth === 414 && iHeight === 896) {
+        return "11 Pro Max";
+      }
+      else if (iWidth === 375 && iHeight === 667) {
+        return "SE 2nd gen";
+      }
+      else if (iWidth === 414 && iHeight === 736) {
+        return "6+";
+      }
+      else if (iWidth === 320 && iHeight === 568) {
+        return "5";
+      }
+      else if (iWidth === 390 && iHeight === 844) {
+        return "12-12 Pro";
+      }
+      else if (iWidth === 428 && iHeight === 926) {
+        return "12/13 Pro Max";
+      }
+      else if (iWidth === 430 && iHeight === 932) {
+        return "14 Pro Max";
+      }
+      else if (iWidth === 360 && iHeight === 780) {
+        return "12 mini";
+      }
+      else if (iHeight <= 480) {
+        return "2-3";
+      }
+      return '';
+    }
+
+    $("#iPhoneName")[0].innerText = getUA() + " " + iPhoneVersion();
+    $("#iOSVersion")[0].innerText = iOS_version().iOSVersion;
+  });
+</script>
+
+</body>
+</html>
