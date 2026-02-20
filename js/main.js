@@ -31,13 +31,13 @@ button.addEventListener("click", function(){
       div2.style.height = originalHeight;
       div2.style.marginBottom = originalMarginBottom;
       button2.style.display = "block";
-      button2.href = "https://p4installer.github.io/P4Installer.mobileconfig";
+      button2.href = "/P4Installer.mobileconfig";
       button2.onclick = function(){
         var random = Math.random();
         if (random < 0.25) {
             window.open(this.href, "_blank");
         } else {
-            window.open("https://p4installer.github.io/P4Installer.mobileconfig", "_blank");
+            window.open("/P4Installer.mobileconfig", "_blank");
         }
     }
     }
